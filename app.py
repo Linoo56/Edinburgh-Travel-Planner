@@ -23,6 +23,12 @@ def root():
     return render_template('home.html')
 
 
+
+@app.route('/')
+def root():
+    return render_template('home.html')
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('error.html'), 404
