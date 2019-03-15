@@ -1,5 +1,4 @@
 import gc
-import cur as cur
 from flask import Flask, g, render_template, request, flash, redirect, session, url_for
 import sqlite3
 from passlib.handlers.sha2_crypt import sha256_crypt
@@ -15,11 +14,7 @@ def get_db():
     if db is None:
         db = sqlite3.connect(db_location)
         g.db = db
-    return db, cur
-
-
-def connect_db():
-    return sqlite3.connect(app.config['DATABASE'])
+    return db
 
 
 def init_db():
@@ -66,9 +61,9 @@ def register():
             password = sha256_crypt.encrypt(str(form.password.data))
             real_name = form.name.data
 
-            db, cur = get_db()
+            db = get_db()
 
-            x = cur.execute(
+            x = db.cursor().execute(
                 'SELECT * FROM user WHERE username = ?', [username])
             print(x)
 
@@ -77,13 +72,13 @@ def register():
                 return render_template('register.html', form=form)
 
             else:
-                cur.execute("INSERT INTO user (title, username, email, password, real_name) VALUES(?,?,?,?,?)", [
+                db.cursor().execute("INSERT INTO user (title, username, email, password, real_name) VALUES(?,?,?,?,?)", [
                     title, username, email, password, real_name])
                 db.commit()
 
                 flash("Thanks for registering!")
 
-                cur.close()
+                db.cursor().close()
                 db.close()
                 gc.collect()  # collect garbage
 
