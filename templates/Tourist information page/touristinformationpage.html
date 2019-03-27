@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Edinburgh Travel Planner">
+<meta name="keywords" content="edinburgh, tourism, travel, planner, locations">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Tourist information page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="title" class="row">
+                <h1>Edinburgh Travel Planner</h1>
+            </div>
+            <nav class="col">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about_edinburgh') }}">About Edinburgh</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+                    <li><a href="{{ url_for('login_page') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <br>
+<body>
+<div class="Align1">
+<h1> Dynamic Earth</h1>
+</div>
+<br>
+<br>
+
+
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <div class="row">
+    <div class="col-xs-4">
+
+    <img src="dynamic_earth_2.png" class="rounded" height="250" width="350" alt="Dynamic Earth">
+  </div>
+
+    <div class="col-xs-8">
+
+    <p>Dynamic earth, a fantastic place to bring the kids to learn about the history of the earth, the ice age, dinosaurs
+    and other extinct animals. <br> Dynamic earth is fun for adults too, Dynamic Earth provides tours for schools from the UK
+    and abroad with workshops and other activities. <br>
+    Hungry? Thirsty? Dynamic Earth has its own cafe the "Food Chain Cafe" <br>
+    Hot food is served until 3pm.</p>
+        <br>
+        <br>
+        <p> For more information please click on the following <b>Link</b>: <br>
+            <a href="https://www.dynamicearth.co.uk/"> Dynamic Earth Website</a></p>
+
+
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<!-- Footer -->
+    <footer>
+    <nav>
+        <ul>
+            <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about_edinburgh') }}">About Edinburgh</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('login_page') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+        </ul>
+    </nav>
+</footer>
+</html>
+{% extends 'layout.html' %}
+
+ {% block body%}
+ {% endblock %}
+
+
