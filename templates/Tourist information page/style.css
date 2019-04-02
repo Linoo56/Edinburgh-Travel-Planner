@@ -132,7 +132,7 @@ footer{
     clear: both;
     background-color: #212733;
     color: white;
-    margin: auto;
+    margin: 60px;
     padding: 5px;
 }
 footer nav{
@@ -181,9 +181,7 @@ footer a{
     font-size: 16px;
 }
 
-.Align1 {
-padding-left: 850px;
-}
+
 
 .span {
 border-color: #000000;

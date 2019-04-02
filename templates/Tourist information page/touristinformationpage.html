@@ -30,11 +30,11 @@
     <br>
     <br>
 <body>
-<div class="Align1">
-<h1> Dynamic Earth</h1>
-</div>
-<br>
-<br>
+
+
+
+
+
 
 
 <div class="container">
@@ -44,22 +44,30 @@
     <div class="row">
     <div class="col-xs-4">
 
-    <img src="dynamic_earth_2.png" class="rounded" height="250" width="350" alt="Dynamic Earth">
+    <img src="dynamic_earth_2.png" class="img-responsive" height="250" width="350" alt="Dynamic Earth">
   </div>
 
     <div class="col-xs-8">
-
+    <dl>
+        <dt>Name</dt>
+        <dd>Dynamic Earth</dd>
+        <br>
+        <dt>Address</dt>
+        <dd>Holyrood Rd, Edinburgh EH8 8AS</dd>
+        <br>
+        <dt>Description</dt>
+        <dd>
     <p>Dynamic earth, a fantastic place to bring the kids to learn about the history of the earth, the ice age, dinosaurs
     and other extinct animals. <br> Dynamic earth is fun for adults too, Dynamic Earth provides tours for schools from the UK
     and abroad with workshops and other activities. <br>
     Hungry? Thirsty? Dynamic Earth has its own cafe the "Food Chain Cafe" <br>
-    Hot food is served until 3pm.</p>
+        Hot food is served until 3pm.</p> </dd>
         <br>
-        <br>
-        <p> For more information please click on the following <b>Link</b>: <br>
-            <a href="https://www.dynamicearth.co.uk/"> Dynamic Earth Website</a></p>
 
+        <dt>Website</dt>
+        <dd><a href="https://www.dynamicearth.co.uk/"> Dynamic Earth Website</a></dd>
 
+    </dl>
     </div>
     </div>
 </div>
@@ -70,7 +78,7 @@
 </div>
 
 
-</body>
+
 <br>
     <br>
     <br>
@@ -85,10 +93,12 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
+
+
+
 <!-- Footer -->
-    <footer>
+    <footer class="footer">
+
     <nav>
         <ul>
             <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
@@ -100,11 +110,13 @@
             <li><a href="{{ url_for('profile') }}">Profile</a></li>
         </ul>
     </nav>
-</footer>
-</html>
-{% extends 'layout.html' %}
 
- {% block body%}
- {% endblock %}
+</footer>
+</body>
+</html>
+{%extends 'layout.html'%}
+
+ {%block body%}
+ {%endblock%}
 
 
